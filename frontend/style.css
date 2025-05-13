@@ -1,0 +1,190 @@
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fa;
+}
+
+/* Flex container layout for three-column layout */
+.container {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  gap: 20px;
+}
+
+/* Sidebar layout */
+.left-sidebar, .right-sidebar {
+  width: 250px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.left-sidebar {
+  flex-shrink: 0;
+}
+
+.right-sidebar {
+  flex-shrink: 0;
+}
+
+/* Sidebar Items */
+.sidebar-item {
+  padding: 10px;
+  font-size: 16px;
+  color: #1d9bf0;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: #e1e8ed;
+  border-radius: 4px;
+}
+
+/* Center content scrolls */
+.center-content {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Heading */
+h1 {
+  font-size: 32px;
+  color: #1d9bf0;
+  margin-bottom: 20px;
+}
+
+/* Tweet Card Styles */
+.tweet-card {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #e1e8ed;
+  padding: 15px;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tweet-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tweet-author {
+  font-weight: bold;
+  color: #000;
+}
+
+.tweet-handle {
+  color: #657786;
+  margin-left: 5px;
+}
+
+.tweet-content {
+  font-size: 16px;
+  color: #14171a;
+  margin-bottom: 10px;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  color: #657786;
+  padding-top: 10px;
+  border-top: 1px solid #e9eef2;
+  margin-top: 10px;
+}
+
+.tweet-action-button {
+  background: none;
+  border: none;
+  color: #657786;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 8px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.tweet-action-button .icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.tweet-action-button:hover {
+  background-color: #e1e8ed;
+  color: #1d9bf0;
+}
+
+/* SVG Icon Styling */
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.tweet-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Specific hover/active colors for different actions can be added here */
+/* For example, making the heart red when active and on hover */
+.tweet-action-like[data-liked="true"] .tweet-icon-heart-filled,
+.tweet-action-like[data-liked="true"]:hover .tweet-icon-heart-filled {
+  fill: #e0245e;
+  stroke: #e0245e;
+}
+
+.tweet-action-like:hover .tweet-icon-heart-outline {
+    color: #e0245e;
+}
+
+.tweet-action-retweet:hover .tweet-icon {
+    color: #17bf63;
+}
+
+.tweet-action-comment:hover .tweet-icon {
+    color: #1d9bf0;
+}
+
+.tweet-timestamp {
+  color: #657786;
+}
+
+/* Right Sidebar Trend Item */
+.trend-item {
+  background-color: #f7f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.trend-item:hover {
+  background-color: #e1e8ed;
+}
